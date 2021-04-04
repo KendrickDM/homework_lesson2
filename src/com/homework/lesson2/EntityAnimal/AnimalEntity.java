@@ -1,10 +1,7 @@
 package com.homework.lesson2.EntityAnimal;
 
 import com.homework.lesson2.EntityGiraffe.GiraffeEntity;
-import sun.jvm.hotspot.memory.SystemDictionary;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class AnimalEntity implements AnimalInterface {
@@ -67,7 +64,6 @@ public class AnimalEntity implements AnimalInterface {
 
         switch(numAnimal){
             case 1:
-               // System.out.println("Вы выбрали Жирафа");
                 System.out.println("Выберите действие");
                 giraffeEntity.chooseAction(new Scanner(System.in), giraffeEntity);
                 break;

@@ -1,6 +1,5 @@
 package com.homework.lesson2;
 
-import com.homework.lesson2.EntityAnimal.AnimalEntity;
 import com.homework.lesson2.EntityGiraffe.GiraffeEntity;
 import com.homework.lesson2.EntityHouse.HouseEntity;
 import com.homework.lesson2.EntityMan.ManEntity;

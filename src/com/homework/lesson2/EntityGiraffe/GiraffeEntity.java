@@ -2,7 +2,6 @@ package com.homework.lesson2.EntityGiraffe;
 
 import com.homework.lesson2.EntityAnimal.AnimalEntity;
 
-import java.util.List;
 import java.util.Scanner;
 
 public class GiraffeEntity extends AnimalEntity implements GiraffeInterface{
@@ -83,7 +82,6 @@ public class GiraffeEntity extends AnimalEntity implements GiraffeInterface{
         System.out.println("3: Попить");
         System.out.println("4: Посмотреть информацию");
 
-        //Scanner sc = new Scanner(System.in);
         int numAction = scanner.nextInt();
 
         switch(numAction){
