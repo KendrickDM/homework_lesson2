@@ -85,7 +85,7 @@ public class ManEntity extends PersonEntity implements ManInterface {
     }
 
     @Override
-    public void chooseAction(Scanner scanner) {
+    public void chooseAction(Scanner scanner, ManEntity manEntity) {
         System.out.println("1: Посмотреть дом");
         System.out.println("2: Поесть");
         System.out.println("3: Поспать");
@@ -115,7 +115,7 @@ public class ManEntity extends PersonEntity implements ManInterface {
                 feed(new Scanner(System.in));
                 break;
             case 7:
-                viewInformation(new ManEntity("Алексей", "Алексеев", "Мужской", 25, "Москва", "Улица Тверская, 3", 75.5, 1.85, "Google", "Product Manager", 300000, "+7 (999)-999-9999", "9999 999999"));
+                viewInformation(manEntity);
                 break;
             default:
                 System.out.println("Повторите попытку!");
@@ -214,18 +214,6 @@ public class ManEntity extends PersonEntity implements ManInterface {
                 System.out.println("Повторите попытку!");
 
         }
-    }
-
-    @Override
-    public void eat() {
-
-        System.out.println("Вы поели");
-    }
-
-    @Override
-    public void sleep() {
-
-        System.out.println("Вы поспали");
     }
 
     @Override

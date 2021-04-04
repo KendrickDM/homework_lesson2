@@ -86,7 +86,7 @@ public class WomanEntity extends PersonEntity implements WomanInterface{
     }
 
     @Override
-    public void chooseAction(Scanner scanner) {
+    public void chooseAction(Scanner scanner, WomanEntity womanEntity) {
         System.out.println("1: Выбрать дом");
         System.out.println("2: Поесть");
         System.out.println("3: Поспать");
@@ -116,7 +116,7 @@ public class WomanEntity extends PersonEntity implements WomanInterface{
                 feed(new Scanner(System.in));
                 break;
             case 7:
-                viewInformation(new WomanEntity("Екатерина", "Екатеринова", "Женский", 21, "Москва", "Улица Тверская, 3", 55.5, 1.70, "Google", "Developer", 150000, "+7 (000)-000-0000", "0000 000000"));
+                viewInformation(womanEntity);
                 break;
             default:
                 System.out.println("Повторите попытку!");
@@ -134,26 +134,6 @@ public class WomanEntity extends PersonEntity implements WomanInterface{
 
         int numRoom = scanner.nextInt();
 
-        switch (numRoom){
-            case 1:
-                viewRoom(numRoom);
-                break;
-            case 2:
-                viewRoom(numRoom);
-                break;
-            case 3:
-                viewRoom(numRoom);
-                break;
-            case 4:
-                viewRoom(numRoom);
-                break;
-            default:
-                System.out.println("Повторите попытку!");
-        }
-    }
-
-    @Override
-    public void viewRoom(int numRoom) {
         switch (numRoom){
             case 1:
                 System.out.println("Вы посмотрели комнату - 1");

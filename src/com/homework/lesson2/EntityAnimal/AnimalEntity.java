@@ -62,17 +62,33 @@ public class AnimalEntity implements AnimalInterface {
         System.out.println("Выберите животное, которое хотите посмотреть");
         System.out.println("1: Жираф");
 
+
         int numAnimal = scanner.nextInt();
 
         switch(numAnimal){
             case 1:
                // System.out.println("Вы выбрали Жирафа");
                 System.out.println("Выберите действие");
-                giraffeEntity.chooseAction(new Scanner(System.in));
+                giraffeEntity.chooseAction(new Scanner(System.in), giraffeEntity);
                 break;
             default:
                 System.out.println("Повторите попытку!");
         }
+    }
+
+    @Override
+    public void eat(AnimalEntity animalEntity) {
+        System.out.println(getAnimalType() + " поел");
+    }
+
+    @Override
+    public void sleep(AnimalEntity animalEntity) {
+        System.out.println(getAnimalType() + " поспал");
+    }
+
+    @Override
+    public void drink(AnimalEntity animalEntity) {
+        System.out.println(getAnimalType() + " попил");
     }
 
     @Override

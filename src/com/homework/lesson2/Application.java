@@ -12,7 +12,8 @@ import java.util.Scanner;
 
 public class Application {
 
-    public static void runApp(Scanner sc, AnimalEntity ae, PersonEntity pe, HouseEntity he, RoomEntity re){
+    public static void runApp(Scanner sc, GiraffeEntity giraffeEntity, PersonEntity personEntity,
+                              ManEntity manEntity, WomanEntity womanEntity, HouseEntity houseEntity, RoomEntity roomEntity){
 
         System.out.print("1: Животное  ");
         System.out.print("2: Человек  ");
@@ -24,16 +25,16 @@ public class Application {
 
         switch(numEntity){
             case 1:
-                ae.chooseAnimal(new Scanner(System.in), new GiraffeEntity());
+                giraffeEntity.chooseAnimal(sc, giraffeEntity);
                 break;
             case 2:
-                pe.choosePerson(new Scanner(System.in), new ManEntity(), new WomanEntity());
+                personEntity.choosePerson(sc, manEntity, womanEntity);
                 break;
             case 3:
-                he.chooseAction(new Scanner(System.in));
+                houseEntity.chooseAction(sc);
                 break;
             case 4:
-                re.chooseAction(new Scanner(System.in));
+                roomEntity.chooseAction(sc);
                 break;
         }
     }

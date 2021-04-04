@@ -6,13 +6,10 @@ import java.util.Scanner;
 
 public interface WomanInterface {
 
-    void chooseAction(Scanner scanner); // выбрать действие
+    void chooseAction(Scanner scanner, WomanEntity womanEntity); // выбрать действие
     void chooseRoom(Scanner scanner); // выбрать комнату
     void chooseHouse(Scanner scanner); // выбрать дома
     void viewHouse(int numHouse); // осмотреть дом
-    void viewRoom(int numRoom); // осмотреть комнату
-    void eat(); // поесть
-    void sleep(); // поспать
     void talk(Scanner scanner); // поговорить
     void patAnimal(Scanner scanner); // погладить животное
     void patPerson(Scanner scanner); // погладить мужчину

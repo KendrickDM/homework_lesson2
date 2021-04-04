@@ -84,15 +84,25 @@ public class PersonEntity implements PersonInterface {
         switch (numPerson){
             case 1:
                 System.out.println("Выберите действие");
-                manEntity.chooseAction(new Scanner(System.in));
+                manEntity.chooseAction(new Scanner(System.in), manEntity);
                 break;
             case 2:
                 System.out.println("Выберите действие");
-                womanEntity.chooseAction(new Scanner(System.in));
+                womanEntity.chooseAction(new Scanner(System.in), womanEntity);
                 break;
             default:
                 System.out.println("Повторите попытку!");
         }
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("Вы поели");
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println("Вы поспали");
     }
 
     @Override

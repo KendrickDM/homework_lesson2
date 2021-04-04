@@ -4,12 +4,10 @@ import java.util.Scanner;
 
 public interface ManInterface {
 
-    void chooseAction(Scanner scanner); // выбрать действие
+    void chooseAction(Scanner scanner, ManEntity manEntity); // выбрать действие
     void chooseRoom(Scanner scanner); // выбрать комнату
     void chooseHouse(Scanner scanner); // выбрать дома
     void viewHouse(Integer numHouse); // осмотреть дом
-    void eat(); // поесть
-    void sleep(); // поспать
     void talk(Scanner scanner); // поговорить
     void pat(Scanner scanner); // погладить
     void patAnimal(Scanner scanner); // погладить животное

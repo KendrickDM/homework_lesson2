@@ -8,5 +8,6 @@ import java.util.Scanner;
 public interface PersonInterface {
 
     void choosePerson(Scanner scanner, ManEntity manEntity, WomanEntity womanEntity);
-
+    void eat(); // поесть
+    void sleep(); // поспать
 }

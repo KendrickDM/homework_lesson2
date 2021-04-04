@@ -77,47 +77,38 @@ public class GiraffeEntity extends AnimalEntity implements GiraffeInterface{
 
 
     @Override
-    public void chooseAction(Scanner scanner) {
+    public void chooseAction(Scanner scanner, GiraffeEntity giraffeEntity) {
         System.out.println("1: Поесть");
         System.out.println("2: Поспать");
-        System.out.println("3: Посмотреть информацию");
+        System.out.println("3: Попить");
+        System.out.println("4: Посмотреть информацию");
 
         //Scanner sc = new Scanner(System.in);
         int numAction = scanner.nextInt();
 
         switch(numAction){
             case 1:
-                eat();
+                eat(giraffeEntity);
                 break;
             case 2:
-                sleep();
+                sleep(giraffeEntity);
                 break;
             case 3:
-                viewInformation(new GiraffeEntity("Жираф", "Мужской", "Желтый и черный", "Саванна, Африка", "Тревис",
-                        7, 800.0, 6.1, "Листья Акации", 55 ));
+                drink(giraffeEntity);
+                break;
+            case 4:
+                viewInformation(giraffeEntity);
                 break;
             default:
                 System.out.println("Повторите попытку!");
         }
     }
 
+
     @Override
     public void viewInformation(GiraffeEntity giraffeEntity) {
-        System.out.println("Информация о Жирафе:");
+        System.out.println("Посмотреть информацию");
         System.out.println(giraffeEntity.toString());
-    }
-
-    @Override
-    public void eat() {
-
-        System.out.println("Жираф поел");
-        //добавить ожидание несколько секунд
-    }
-
-    @Override
-    public void sleep() {
-
-        System.out.println("Жираф поспал");
     }
 
     @Override
