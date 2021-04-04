@@ -88,6 +88,12 @@ public class AnimalEntity implements AnimalInterface {
     }
 
     @Override
+    public void viewInformation(AnimalEntity animalEntity) {
+        System.out.println("Посмотреть информацию");
+        System.out.println(animalEntity.toString());
+    }
+
+    @Override
     public String toString() {
         return "Тип животного: " + animalType + "\n" +
                 "Пол: " + gender + "\n" +

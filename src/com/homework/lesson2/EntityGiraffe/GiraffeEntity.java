@@ -103,11 +103,11 @@ public class GiraffeEntity extends AnimalEntity implements GiraffeInterface{
     }
 
 
-    @Override
-    public void viewInformation(GiraffeEntity giraffeEntity) {
-        System.out.println("Посмотреть информацию");
-        System.out.println(giraffeEntity.toString());
-    }
+//    @Override
+//    public void viewInformation(GiraffeEntity giraffeEntity) {
+//        System.out.println("Посмотреть информацию");
+//        System.out.println(giraffeEntity.toString());
+//    }
 
     @Override
     public String toString() {

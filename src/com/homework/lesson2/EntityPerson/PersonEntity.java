@@ -1,5 +1,6 @@
 package com.homework.lesson2.EntityPerson;
 
+import com.homework.lesson2.EntityAnimal.AnimalEntity;
 import com.homework.lesson2.EntityMan.ManEntity;
 import com.homework.lesson2.EntityWoman.WomanEntity;
 
@@ -74,7 +75,7 @@ public class PersonEntity implements PersonInterface {
     }
 
     @Override
-    public void choosePerson(Scanner scanner, ManEntity manEntity, WomanEntity womanEntity) {
+    public void choosePerson(Scanner scanner, ManEntity manEntity, WomanEntity womanEntity, AnimalEntity animalEntity) {
         System.out.println("Выберите человека, которого хотите посмотреть");
         System.out.println("1: Мужчина");
         System.out.println("2: Женщина");
@@ -84,11 +85,11 @@ public class PersonEntity implements PersonInterface {
         switch (numPerson){
             case 1:
                 System.out.println("Выберите действие");
-                manEntity.chooseAction(new Scanner(System.in), manEntity);
+                manEntity.chooseAction(scanner, manEntity, womanEntity, animalEntity);
                 break;
             case 2:
                 System.out.println("Выберите действие");
-                womanEntity.chooseAction(new Scanner(System.in), womanEntity);
+                womanEntity.chooseAction(scanner, womanEntity, manEntity, animalEntity);
                 break;
             default:
                 System.out.println("Повторите попытку!");
@@ -105,6 +106,243 @@ public class PersonEntity implements PersonInterface {
         System.out.println("Вы поспали");
     }
 
+    @Override
+    public void viewInformation(PersonEntity personEntity) {
+        System.out.println("Информация о " + personEntity.getGender() + ":");
+        System.out.println(personEntity.toString());
+    }
+    @Override
+    public void chooseRoom(Scanner scanner) {
+        System.out.println("Выберите комнату, которую хотите посмотреть");
+        System.out.println("1: Комната - 1");
+        System.out.println("2: Комната - 2");
+        System.out.println("3: Комната - 3");
+        System.out.println("4: Комната - 4");
+
+        int numRoom = scanner.nextInt();
+
+        switch (numRoom){
+            case 1:
+                System.out.println("Вы посмотрели комнату - 1");
+                break;
+            case 2:
+                System.out.println("Вы посмотрели комнату - 2");
+                break;
+            case 3:
+                System.out.println("Вы посмотрели комнату - 3");
+                break;
+            case 4:
+                System.out.println("Вы посмотрели комнату - 4");
+                break;
+            default:
+                System.out.println("Повторите попытку!");
+        }
+    }
+
+    @Override
+    public void chooseHouse(Scanner scanner) {
+        System.out.println("Выберите дом, который хотите посмотреть");
+        System.out.println("1: Дом - 1 ");
+        System.out.println("2: Дом - 2 ");
+        System.out.println("3: Дом - 3 ");
+        System.out.println("4: Дом - 4 ");
+
+        int numHouse = scanner.nextInt();
+
+        switch (numHouse){
+            case 1:
+                viewHouse(numHouse);
+                System.out.println();
+                System.out.println("Выберите комнату, которую хотите посмотреть в доме - 1");
+                System.out.println();
+                chooseRoom(new Scanner(System.in));
+                break;
+            case 2:
+                viewHouse(numHouse);
+                System.out.println();
+                System.out.println("Выберите комнату, которую хотите посмотреть в доме - 2");
+                System.out.println();
+                chooseRoom(new Scanner(System.in));
+                break;
+            case 3:
+                viewHouse(numHouse);
+                System.out.println();
+                System.out.println("Выберите комнату, которую хотите посмотреть в доме - 3");
+                System.out.println();
+                chooseRoom(new Scanner(System.in));
+                break;
+            case 4:
+                viewHouse(numHouse);
+                System.out.println();
+                System.out.println("Выберите комнату, которую хотите посмотреть в доме - 4");
+                System.out.println();
+                chooseRoom(new Scanner(System.in));
+                break;
+            default:
+                System.out.println("Повторите попытку!");
+        }
+    }
+
+    @Override
+    public void viewHouse(Integer numHouse) {
+        switch (numHouse){
+            case 1:
+                System.out.println("Вы посмотрели дом - 1");
+                break;
+            case 2:
+                System.out.println("Вы посмотрели дом - 2");
+                break;
+            case 3:
+                System.out.println("Вы посмотрели дом - 3");
+                break;
+            case 4:
+                System.out.println("Вы посмотрели дом - 4");
+                break;
+            default:
+                System.out.println("Повторите попытку!");
+
+        }
+    }
+
+    @Override
+    public void talk(Scanner scanner, PersonEntity personEntity, AnimalEntity animalEntity) {
+        System.out.println("Выберите с кем хотите поговорить");
+        System.out.println("1: " + personEntity.getGender());
+        System.out.println("2: " + animalEntity.getAnimalType());
+
+        int numTalk = scanner.nextInt();
+
+        switch (numTalk){
+            case 1:
+                System.out.println("Вы поговорили с " + personEntity.getGender());
+                break;
+            case 2:
+                System.out.println("С жирафом нельзя поговорить, но зато его можно погладить и покормить");
+                actionWithAnimals(scanner);
+                break;
+            default:
+                System.out.println("Повторите попытку!");
+        }
+
+    }
+
+    @Override
+    public void patAnimal(Scanner scanner) {
+        System.out.println("Выберите животное, которое хотите погладить");
+        System.out.println("1: Жираф");
+
+        int numAnimal = scanner.nextInt();
+
+        switch (numAnimal){
+            case 1:
+                System.out.println("Вы погладили жирафа ");
+                break;
+            default:
+                System.out.println("Повторите попытку!");
+        }
+    }
+
+    @Override
+    public void patPerson(Scanner scanner) {
+        System.out.println("Выберите человека, которого хотите погладить");
+        System.out.println("1: Женщина");
+        int numPerson = scanner.nextInt();
+
+        switch (numPerson) {
+            case 1:
+                System.out.println("Вы погладили женщину");
+                break;
+            default:
+                System.out.println("Повторите попытку!");
+        }
+    }
+
+    @Override
+    public void pat(Scanner scanner) {
+        System.out.println("Выберите кого хотите погладить");
+        System.out.println("1: Человек");
+        System.out.println("2: Животное");
+
+        int numEntity = scanner.nextInt();
+
+        switch (numEntity) {
+            case 1:
+                patPerson(scanner);
+                break;
+            case 2:
+                patAnimal(scanner);
+                break;
+            default:
+                System.out.println("Повторите попытку");
+        }
+    }
+
+    @Override
+    public void actionWithAnimals(Scanner scanner) {
+        System.out.println("1: Погладить");
+        System.out.println("2: Покормить");
+
+        int numAnimal = scanner.nextInt();
+        switch (numAnimal){
+            case 1:
+                System.out.println("Вы погладили жирафа");
+                break;
+            case 2:
+                System.out.println("Вы покормили жирафа");
+                break;
+            default:
+                System.out.println("Повторите попытку!");
+        }
+    }
+
+    @Override
+    public void feed(Scanner scanner) {
+        System.out.println("Выберите кого вы хотите покормить");
+        System.out.println("1:Человек");
+        System.out.println("2:Животное");
+
+        int numEntity = scanner.nextInt();
+
+        switch (numEntity) {
+            case 1:
+                feedPerson(scanner);
+                break;
+            case 2:
+                feedAnimal(scanner);
+        }
+    }
+
+    @Override
+    public void feedPerson(Scanner scanner) {
+        System.out.println("Выберите человека, которого хотите покормить");
+        System.out.println("1: Женщина");
+
+        int numPerson = scanner.nextInt();
+
+        switch (numPerson){
+            case 1:
+                System.out.println("Вы покормили женщину");
+                break;
+            default:
+                System.out.println("Повторите попытку!");
+        }
+    }
+
+    @Override
+    public void feedAnimal(Scanner scanner) {
+        System.out.println("Выберите животное, которое хотите покормить");
+        System.out.println("1: Жираф");
+
+        int numAnimal = scanner.nextInt();
+
+        switch (numAnimal){
+            case 1:
+                System.out.println("Вы покормили Жирафа");
+                break;
+            default:
+                System.out.println("Повторите попытку!");
+        }
+    }
     @Override
     public String toString() {
         return "Имя: " + name + "\n" +

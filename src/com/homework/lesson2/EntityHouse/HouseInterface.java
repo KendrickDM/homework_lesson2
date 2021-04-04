@@ -4,7 +4,7 @@ import com.homework.lesson2.EntityRoom.RoomEntity;
 
 import java.util.Scanner;
 
-public interface HouseInterface  {
+public interface HouseInterface {
 
     void chooseHouse(Scanner scanner, RoomEntity roomEntity);
     void viewHouse(Integer numHouse);

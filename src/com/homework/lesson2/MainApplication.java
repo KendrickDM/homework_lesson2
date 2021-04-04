@@ -21,8 +21,14 @@ public class MainApplication {
                 7, 800.0, 6.1, "Листья Акации", 55);
         PersonEntity personEntity = new PersonEntity();
 
-        ManEntity manEntity = new ManEntity("Алексей", "Алексеев", "Мужской", 25, "Москва", "Улица Тверская, 3", 75.5, 1.85, "Google", "Product Manager", 300000, "+7 (999)-999-9999", "9999 999999");
-        WomanEntity womanEntity = new WomanEntity("Екатерина", "Екатеринова", "Женский", 21, "Москва", "Улица Тверская, 3", 55.5, 1.70, "Google", "Developer", 150000, "+7 (000)-000-0000", "0000 000000");
+        ManEntity manEntity = new ManEntity("Алексей", "Алексеев", "Мужчина", 25, "Москва",
+                "Улица Тверская, 3", 75.5, 1.85, "Google", "Product Manager", 300000,
+                "+7 (999)-999-9999", "9999 999999");
+
+        WomanEntity womanEntity = new WomanEntity("Екатерина", "Екатеринова", "Женщина", 21,
+                "Москва", "Улица Тверская, 3", 55.5, 1.70, "Google", "Developer",
+                150000, "+7 (000)-000-0000", "0000 000000");
+
         HouseEntity houseEntity = new HouseEntity();
         RoomEntity roomEntity = new RoomEntity();
 
