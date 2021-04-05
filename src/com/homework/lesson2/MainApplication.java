@@ -19,6 +19,7 @@ public class MainApplication {
 
         GiraffeEntity giraffeEntity = new GiraffeEntity("Жираф", "Мужской", "Желтый и черный", "Саванна, Африка", "Тревис",
                 7, 800.0, 6.1, "Листья Акации", 55);
+
         PersonEntity personEntity = new PersonEntity();
 
         ManEntity manEntity = new ManEntity("Алексей", "Алексеев", "Мужчина", 25, "Москва",
@@ -29,8 +30,10 @@ public class MainApplication {
                 "Москва", "Улица Тверская, 3", 55.5, 1.70, "Google", "Developer",
                 150000, "+7 (000)-000-0000", "0000 000000");
 
-        HouseEntity houseEntity = new HouseEntity();
-        RoomEntity roomEntity = new RoomEntity();
+        HouseEntity houseEntity = new HouseEntity("Москва", "Улица Тверская", 3,
+                185, 2, 4 );
+        RoomEntity roomEntity = new RoomEntity(25, "Светло бежевый",
+                23, 1, "Кухня");
 
         Application.runApp(sc, giraffeEntity, personEntity, manEntity, womanEntity, houseEntity, roomEntity);
     }

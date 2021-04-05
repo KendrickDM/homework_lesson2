@@ -27,13 +27,13 @@ public class Application {
                 giraffeEntity.chooseAnimal(sc, giraffeEntity);
                 break;
             case 2:
-                personEntity.choosePerson(sc, manEntity, womanEntity, giraffeEntity);
+                personEntity.choosePerson(sc, manEntity, womanEntity, giraffeEntity, roomEntity);
                 break;
             case 3:
-                houseEntity.chooseAction(sc);
+                houseEntity.chooseAction(sc, houseEntity, roomEntity);
                 break;
             case 4:
-                roomEntity.chooseAction(sc);
+                roomEntity.chooseAction(sc, roomEntity);
                 break;
         }
     }

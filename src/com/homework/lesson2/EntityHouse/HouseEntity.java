@@ -13,6 +13,7 @@ public class HouseEntity implements HouseInterface{
     private Integer quantityOfFloors; // количество этажей
     private Integer quantityOfRooms; // количество комнат
 
+
     public HouseEntity(){
 
     }
@@ -75,7 +76,7 @@ public class HouseEntity implements HouseInterface{
     }
 
     @Override
-    public void chooseAction(Scanner scanner) {
+    public void chooseAction(Scanner scanner, HouseEntity houseEntity, RoomEntity roomEntity) {
         System.out.println("1: Посмотреть дом");
         System.out.println("2: Посмотреть информацию о доме");
 
@@ -83,10 +84,10 @@ public class HouseEntity implements HouseInterface{
 
         switch (numAction) {
             case 1:
-                chooseHouse(new Scanner(System.in), new RoomEntity());
+                chooseHouse(scanner, roomEntity);
                 break;
             case 2:
-                chooseInformation(new Scanner(System.in), new HouseEntity());
+                chooseInformation(scanner, houseEntity);
                 break;
             default:
                 System.out.println("Повторите попытку!");
@@ -97,9 +98,6 @@ public class HouseEntity implements HouseInterface{
     public void chooseHouse(Scanner scanner, RoomEntity roomEntity) {
         System.out.println("Выберите дом, который хотите посмотреть");
         System.out.println("1: Дом - 1 ");
-        System.out.println("2: Дом - 2 ");
-        System.out.println("3: Дом - 3 ");
-        System.out.println("4: Дом - 4");
 
         int numHouse = scanner.nextInt();
 
@@ -109,28 +107,7 @@ public class HouseEntity implements HouseInterface{
                 System.out.println();
                 System.out.println("Выберите комнату, которую хотите посмотреть в доме - 1");
                 System.out.println();
-                roomEntity.chooseRoom(new Scanner(System.in));
-                break;
-            case 2:
-                viewHouse(numHouse);
-                System.out.println();
-                System.out.println("Выберите комнату, которую хотите посмотреть в доме - 2");
-                System.out.println();
-                roomEntity.chooseRoom(new Scanner(System.in));
-                break;
-            case 3:
-                viewHouse(numHouse);
-                System.out.println();
-                System.out.println("Выберите комнату, которую хотите посмотреть в доме - 3");
-                System.out.println();
-                roomEntity.chooseRoom(new Scanner(System.in));
-                break;
-            case 4:
-                viewHouse(numHouse);
-                System.out.println();
-                System.out.println("Выберите комнату, которую хотите посмотреть в доме - 4");
-                System.out.println();
-                roomEntity.chooseRoom(new Scanner(System.in));
+                roomEntity.chooseRoom(scanner);
                 break;
             default:
                 System.out.println("Повторите попытку!");
@@ -143,15 +120,6 @@ public class HouseEntity implements HouseInterface{
             case 1:
                 System.out.println("Вы посмотрели дом - 1");
                 break;
-            case 2:
-                System.out.println("Вы посмотрели дом - 2");
-                break;
-            case 3:
-                System.out.println("Вы посмотрели дом - 3");
-                break;
-            case 4:
-                System.out.println("Вы посмотрели дом - 4");
-                break;
             default:
                 System.out.println("Повторите попытку!");
 
@@ -162,28 +130,13 @@ public class HouseEntity implements HouseInterface{
     public void chooseInformation(Scanner scanner, HouseEntity houseEntity) {
         System.out.println("Выберите дом про который хотите посмотреть информацию");
         System.out.println("1: Дом - 1 ");
-        System.out.println("2: Дом - 2 ");
-        System.out.println("3: Дом - 3 ");
-        System.out.println("4: Дом - 4");
 
         int numInf = scanner.nextInt();
 
         switch (numInf) {
             case 1:
                 System.out.println("Информация о доме - 1:");
-                viewInformation(numInf, new HouseEntity("Москва", "Улица Тверская", 3, 185, 2, 4 ));
-                break;
-            case 2:
-                System.out.println("Информация о доме - 2:");
-                viewInformation(numInf, new HouseEntity("Казань", "Улица К", 5, 99, 1, 4 ));
-                break;
-            case 3:
-                System.out.println("Информация о доме - 3:");
-                viewInformation(numInf, new HouseEntity("Лондон", "Улица Л", 1, 120, 2, 4 ));
-                break;
-            case 4:
-                System.out.println("Информация о доме - 4:");
-                viewInformation(numInf, new HouseEntity("Нижний Новгород", "Улица Н", 10, 133, 3, 4 ));
+                viewInformation(numInf, houseEntity);
                 break;
             default:
                 System.out.println("Повторите попытку!");
@@ -195,9 +148,6 @@ public class HouseEntity implements HouseInterface{
 
         switch (numView) {
             case 1:
-            case 2:
-            case 3:
-            case 4:
                 System.out.println(houseEntity.toString());
                 break;
             default:

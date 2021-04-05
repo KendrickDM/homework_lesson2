@@ -1,7 +1,8 @@
 package com.homework.lesson2.EntityPerson;
 
-import com.homework.lesson2.EntityAnimal.AnimalEntity;
+import com.homework.lesson2.EntityGiraffe.GiraffeEntity;
 import com.homework.lesson2.EntityMan.ManEntity;
+import com.homework.lesson2.EntityRoom.RoomEntity;
 import com.homework.lesson2.EntityWoman.WomanEntity;
 
 import java.util.Scanner;
@@ -75,7 +76,7 @@ public class PersonEntity implements PersonInterface {
     }
 
     @Override
-    public void choosePerson(Scanner scanner, ManEntity manEntity, WomanEntity womanEntity, AnimalEntity animalEntity) {
+    public void choosePerson(Scanner scanner, ManEntity manEntity, WomanEntity womanEntity, GiraffeEntity giraffeEntity, RoomEntity roomEntity) {
         System.out.println("Выберите человека, которого хотите посмотреть");
         System.out.println("1: Мужчина");
         System.out.println("2: Женщина");
@@ -85,11 +86,11 @@ public class PersonEntity implements PersonInterface {
         switch (numPerson){
             case 1:
                 System.out.println("Выберите действие");
-                manEntity.chooseAction(scanner, manEntity, womanEntity, animalEntity);
+                manEntity.chooseAction(scanner, manEntity, roomEntity );
                 break;
             case 2:
                 System.out.println("Выберите действие");
-                womanEntity.chooseAction(scanner, womanEntity, manEntity, animalEntity);
+                womanEntity.chooseAction(scanner, womanEntity, roomEntity);
                 break;
             default:
                 System.out.println("Повторите попытку!");
@@ -112,18 +113,19 @@ public class PersonEntity implements PersonInterface {
         System.out.println(personEntity.toString());
     }
     @Override
-    public void chooseRoom(Scanner scanner) {
+    public void chooseRoom(Scanner scanner, RoomEntity roomEntity) {
         System.out.println("Выберите комнату, которую хотите посмотреть");
         System.out.println("1: Комната - 1");
         System.out.println("2: Комната - 2");
         System.out.println("3: Комната - 3");
         System.out.println("4: Комната - 4");
 
-        int numRoom = scanner.nextInt();
+        Integer numRoom = scanner.nextInt();
 
         switch (numRoom){
             case 1:
                 System.out.println("Вы посмотрели комнату - 1");
+                roomEntity.viewInformation(numRoom, roomEntity);
                 break;
             case 2:
                 System.out.println("Вы посмотрели комнату - 2");
@@ -140,7 +142,7 @@ public class PersonEntity implements PersonInterface {
     }
 
     @Override
-    public void chooseHouse(Scanner scanner) {
+    public void chooseHouse(Scanner scanner, RoomEntity roomEntity) {
         System.out.println("Выберите дом, который хотите посмотреть");
         System.out.println("1: Дом - 1 ");
         System.out.println("2: Дом - 2 ");
@@ -155,28 +157,28 @@ public class PersonEntity implements PersonInterface {
                 System.out.println();
                 System.out.println("Выберите комнату, которую хотите посмотреть в доме - 1");
                 System.out.println();
-                chooseRoom(new Scanner(System.in));
+                chooseRoom(scanner, roomEntity);
                 break;
             case 2:
                 viewHouse(numHouse);
                 System.out.println();
                 System.out.println("Выберите комнату, которую хотите посмотреть в доме - 2");
                 System.out.println();
-                chooseRoom(new Scanner(System.in));
+                chooseRoom(scanner, roomEntity);
                 break;
             case 3:
                 viewHouse(numHouse);
                 System.out.println();
                 System.out.println("Выберите комнату, которую хотите посмотреть в доме - 3");
                 System.out.println();
-                chooseRoom(new Scanner(System.in));
+                chooseRoom(scanner, roomEntity);
                 break;
             case 4:
                 viewHouse(numHouse);
                 System.out.println();
                 System.out.println("Выберите комнату, которую хотите посмотреть в доме - 4");
                 System.out.println();
-                chooseRoom(new Scanner(System.in));
+                chooseRoom(scanner, roomEntity);
                 break;
             default:
                 System.out.println("Повторите попытку!");
@@ -204,27 +206,6 @@ public class PersonEntity implements PersonInterface {
         }
     }
 
-    @Override
-    public void talk(Scanner scanner, PersonEntity personEntity, AnimalEntity animalEntity) {
-        System.out.println("Выберите с кем хотите поговорить");
-        System.out.println("1: " + personEntity.getGender());
-        System.out.println("2: " + animalEntity.getAnimalType());
-
-        int numTalk = scanner.nextInt();
-
-        switch (numTalk){
-            case 1:
-                System.out.println("Вы поговорили с " + personEntity.getGender());
-                break;
-            case 2:
-                System.out.println("С жирафом нельзя поговорить, но зато его можно погладить и покормить");
-                actionWithAnimals(scanner);
-                break;
-            default:
-                System.out.println("Повторите попытку!");
-        }
-
-    }
 
     @Override
     public void patAnimal(Scanner scanner) {
@@ -274,24 +255,6 @@ public class PersonEntity implements PersonInterface {
                 break;
             default:
                 System.out.println("Повторите попытку");
-        }
-    }
-
-    @Override
-    public void actionWithAnimals(Scanner scanner) {
-        System.out.println("1: Погладить");
-        System.out.println("2: Покормить");
-
-        int numAnimal = scanner.nextInt();
-        switch (numAnimal){
-            case 1:
-                System.out.println("Вы погладили жирафа");
-                break;
-            case 2:
-                System.out.println("Вы покормили жирафа");
-                break;
-            default:
-                System.out.println("Повторите попытку!");
         }
     }
 
