@@ -7,6 +7,6 @@ import java.util.Scanner;
 public interface GiraffeInterface extends AnimalInterface {
 
     void chooseAction(Scanner scanner, GiraffeEntity giraffeEntity); // выбрать действие
-    void printName(GiraffeEntity giraffeEntity);
-    void printUniqueInformation(GiraffeEntity giraffeEntity);
+    void printName(GiraffeEntity giraffeEntity); // вывод имени
+    void printUniqueInformation(GiraffeEntity giraffeEntity); // вывод уникальной информации
 }

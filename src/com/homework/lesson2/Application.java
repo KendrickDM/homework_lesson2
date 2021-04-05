@@ -27,7 +27,7 @@ public class Application {
                 giraffeEntity.chooseAnimal(sc, giraffeEntity);
                 break;
             case 2:
-                personEntity.choosePerson(sc, manEntity, womanEntity, giraffeEntity, roomEntity);
+                personEntity.choosePerson(sc, manEntity, womanEntity, giraffeEntity, houseEntity, roomEntity);
                 break;
             case 3:
                 houseEntity.chooseAction(sc, houseEntity, roomEntity);

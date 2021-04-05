@@ -1,6 +1,7 @@
 package com.homework.lesson2.EntityPerson;
 
 import com.homework.lesson2.EntityGiraffe.GiraffeEntity;
+import com.homework.lesson2.EntityHouse.HouseEntity;
 import com.homework.lesson2.EntityMan.ManEntity;
 import com.homework.lesson2.EntityRoom.RoomEntity;
 import com.homework.lesson2.EntityWoman.WomanEntity;
@@ -76,7 +77,7 @@ public class PersonEntity implements PersonInterface {
     }
 
     @Override
-    public void choosePerson(Scanner scanner, ManEntity manEntity, WomanEntity womanEntity, GiraffeEntity giraffeEntity, RoomEntity roomEntity) {
+    public void choosePerson(Scanner scanner, ManEntity manEntity, WomanEntity womanEntity, GiraffeEntity giraffeEntity, HouseEntity houseEntity, RoomEntity roomEntity) {
         System.out.println("Выберите человека, которого хотите посмотреть");
         System.out.println("1: Мужчина");
         System.out.println("2: Женщина");
@@ -86,11 +87,11 @@ public class PersonEntity implements PersonInterface {
         switch (numPerson){
             case 1:
                 System.out.println("Выберите действие");
-                manEntity.chooseAction(scanner, manEntity, roomEntity );
+                manEntity.chooseAction(scanner, manEntity, houseEntity, roomEntity);
                 break;
             case 2:
                 System.out.println("Выберите действие");
-                womanEntity.chooseAction(scanner, womanEntity, roomEntity);
+                womanEntity.chooseAction(scanner, womanEntity, houseEntity, roomEntity);
                 break;
             default:
                 System.out.println("Повторите попытку!");
@@ -112,6 +113,7 @@ public class PersonEntity implements PersonInterface {
         System.out.println("Информация о " + personEntity.getGender() + ":");
         System.out.println(personEntity.toString());
     }
+
     @Override
     public void chooseRoom(Scanner scanner, RoomEntity roomEntity) {
         System.out.println("Выберите комнату, которую хотите посмотреть");
@@ -130,7 +132,7 @@ public class PersonEntity implements PersonInterface {
     }
 
     @Override
-    public void chooseHouse(Scanner scanner, RoomEntity roomEntity) {
+    public void chooseHouse(Scanner scanner, HouseEntity houseEntity, RoomEntity roomEntity) {
         System.out.println("Выберите дом, который хотите посмотреть");
         System.out.println("1: Дом - 1 ");
 
@@ -139,6 +141,7 @@ public class PersonEntity implements PersonInterface {
         switch (numHouse){
             case 1:
                 viewHouse(numHouse);
+                houseEntity.viewInformationHouse(numHouse, houseEntity);
                 System.out.println();
                 System.out.println("Выберите комнату, которую хотите посмотреть в доме - 1");
                 System.out.println();

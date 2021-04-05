@@ -1,5 +1,6 @@
 package com.homework.lesson2.EntityMan;
 
+import com.homework.lesson2.EntityHouse.HouseEntity;
 import com.homework.lesson2.EntityPerson.PersonEntity;
 import com.homework.lesson2.EntityRoom.RoomEntity;
 
@@ -86,7 +87,7 @@ public class ManEntity extends PersonEntity implements ManInterface {
     }
 
     @Override
-    public void chooseAction(Scanner scanner, ManEntity manEntity, RoomEntity roomEntity) {
+    public void chooseAction(Scanner scanner, ManEntity manEntity, HouseEntity houseEntity, RoomEntity roomEntity) {
         System.out.println("1: Посмотреть дом");
         System.out.println("2: Поесть");
         System.out.println("3: Поспать");
@@ -97,7 +98,7 @@ public class ManEntity extends PersonEntity implements ManInterface {
         int numAction = scanner.nextInt();
         switch (numAction){
             case 1:
-                chooseHouse(scanner, roomEntity);
+                chooseHouse(scanner, houseEntity, roomEntity);
                 break;
             case 2:
                 eat();

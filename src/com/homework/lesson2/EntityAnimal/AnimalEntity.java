@@ -15,6 +15,7 @@ public class AnimalEntity implements AnimalInterface {
     public AnimalEntity(){}
 
     public AnimalEntity(String animalType, String gender, String color, String placeOfResidence) {
+
         this.animalType = animalType;
         this.gender = gender;
         this.color = color;
