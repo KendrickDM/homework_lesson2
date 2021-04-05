@@ -11,4 +11,5 @@ public interface AnimalInterface {
     void sleep(AnimalEntity animalEntity);
     void drink(AnimalEntity animalEntity);
     void viewInformationAnimal(AnimalEntity animalEntity);
+
 }

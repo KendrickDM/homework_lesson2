@@ -74,6 +74,18 @@ public class GiraffeEntity extends AnimalEntity implements GiraffeInterface{
         this.maxSpeed = maxSpeed;
     }
 
+    @Override
+    public void printName(GiraffeEntity giraffeEntity) {
+        System.out.println("Жирафа зовут " + giraffeEntity.getName());
+    }
+
+    @Override
+    public void printUniqueInformation(GiraffeEntity giraffeEntity) {
+        System.out.println("Жираф может развивать скорость до " + giraffeEntity.getMaxSpeed() +" км/ч");
+        System.out.println(giraffeEntity.getPreferredFood() + " любимая еда жирафа");
+        System.out.println("Среда обитания жирафа " + giraffeEntity.getPlaceOfResidence());
+        System.out.println("Рост жирафа может достигать " + giraffeEntity.getHeight() + " метров");
+    }
 
     @Override
     public void chooseAction(Scanner scanner, GiraffeEntity giraffeEntity) {
@@ -81,6 +93,8 @@ public class GiraffeEntity extends AnimalEntity implements GiraffeInterface{
         System.out.println("2: Поспать");
         System.out.println("3: Попить");
         System.out.println("4: Посмотреть информацию");
+        System.out.println("5: Узнать имя жирафа");
+        System.out.println("6: Узнать интересную информацию о жирафе");
 
         int numAction = scanner.nextInt();
 
@@ -96,6 +110,12 @@ public class GiraffeEntity extends AnimalEntity implements GiraffeInterface{
                 break;
             case 4:
                 viewInformationAnimal(giraffeEntity);
+                break;
+            case 5:
+                printName(giraffeEntity);
+                break;
+            case 6:
+                printUniqueInformation(giraffeEntity);
                 break;
             default:
                 System.out.println("Повторите попытку!");
