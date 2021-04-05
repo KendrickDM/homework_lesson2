@@ -95,19 +95,12 @@ public class GiraffeEntity extends AnimalEntity implements GiraffeInterface{
                 drink(giraffeEntity);
                 break;
             case 4:
-                viewInformation(giraffeEntity);
+                viewInformationAnimal(giraffeEntity);
                 break;
             default:
                 System.out.println("Повторите попытку!");
         }
     }
-
-
-//    @Override
-//    public void viewInformation(GiraffeEntity giraffeEntity) {
-//        System.out.println("Посмотреть информацию");
-//        System.out.println(giraffeEntity.toString());
-//    }
 
     @Override
     public String toString() {

@@ -87,7 +87,7 @@ public class HouseEntity implements HouseInterface{
                 chooseHouse(scanner, roomEntity);
                 break;
             case 2:
-                chooseInformation(scanner, houseEntity);
+                chooseInformationHouse(scanner, houseEntity);
                 break;
             default:
                 System.out.println("Повторите попытку!");
@@ -127,7 +127,7 @@ public class HouseEntity implements HouseInterface{
     }
 
     @Override
-    public void chooseInformation(Scanner scanner, HouseEntity houseEntity) {
+    public void chooseInformationHouse(Scanner scanner, HouseEntity houseEntity) {
         System.out.println("Выберите дом про который хотите посмотреть информацию");
         System.out.println("1: Дом - 1 ");
 
@@ -136,7 +136,7 @@ public class HouseEntity implements HouseInterface{
         switch (numInf) {
             case 1:
                 System.out.println("Информация о доме - 1:");
-                viewInformation(numInf, houseEntity);
+                viewInformationHouse(numInf, houseEntity);
                 break;
             default:
                 System.out.println("Повторите попытку!");
@@ -144,7 +144,7 @@ public class HouseEntity implements HouseInterface{
     }
 
     @Override
-    public void viewInformation(Integer numView, HouseEntity houseEntity) {
+    public void viewInformationHouse(Integer numView, HouseEntity houseEntity) {
 
         switch (numView) {
             case 1:

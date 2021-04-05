@@ -116,25 +116,13 @@ public class PersonEntity implements PersonInterface {
     public void chooseRoom(Scanner scanner, RoomEntity roomEntity) {
         System.out.println("Выберите комнату, которую хотите посмотреть");
         System.out.println("1: Комната - 1");
-        System.out.println("2: Комната - 2");
-        System.out.println("3: Комната - 3");
-        System.out.println("4: Комната - 4");
 
         Integer numRoom = scanner.nextInt();
 
         switch (numRoom){
             case 1:
                 System.out.println("Вы посмотрели комнату - 1");
-                roomEntity.viewInformation(numRoom, roomEntity);
-                break;
-            case 2:
-                System.out.println("Вы посмотрели комнату - 2");
-                break;
-            case 3:
-                System.out.println("Вы посмотрели комнату - 3");
-                break;
-            case 4:
-                System.out.println("Вы посмотрели комнату - 4");
+                roomEntity.viewInformationRoom(numRoom, roomEntity);
                 break;
             default:
                 System.out.println("Повторите попытку!");
@@ -145,9 +133,6 @@ public class PersonEntity implements PersonInterface {
     public void chooseHouse(Scanner scanner, RoomEntity roomEntity) {
         System.out.println("Выберите дом, который хотите посмотреть");
         System.out.println("1: Дом - 1 ");
-        System.out.println("2: Дом - 2 ");
-        System.out.println("3: Дом - 3 ");
-        System.out.println("4: Дом - 4 ");
 
         int numHouse = scanner.nextInt();
 
@@ -156,27 +141,6 @@ public class PersonEntity implements PersonInterface {
                 viewHouse(numHouse);
                 System.out.println();
                 System.out.println("Выберите комнату, которую хотите посмотреть в доме - 1");
-                System.out.println();
-                chooseRoom(scanner, roomEntity);
-                break;
-            case 2:
-                viewHouse(numHouse);
-                System.out.println();
-                System.out.println("Выберите комнату, которую хотите посмотреть в доме - 2");
-                System.out.println();
-                chooseRoom(scanner, roomEntity);
-                break;
-            case 3:
-                viewHouse(numHouse);
-                System.out.println();
-                System.out.println("Выберите комнату, которую хотите посмотреть в доме - 3");
-                System.out.println();
-                chooseRoom(scanner, roomEntity);
-                break;
-            case 4:
-                viewHouse(numHouse);
-                System.out.println();
-                System.out.println("Выберите комнату, которую хотите посмотреть в доме - 4");
                 System.out.println();
                 chooseRoom(scanner, roomEntity);
                 break;

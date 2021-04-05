@@ -88,7 +88,7 @@ public class AnimalEntity implements AnimalInterface {
     }
 
     @Override
-    public void viewInformation(AnimalEntity animalEntity) {
+    public void viewInformationAnimal(AnimalEntity animalEntity) {
         System.out.println("Посмотреть информацию");
         System.out.println(animalEntity.toString());
     }

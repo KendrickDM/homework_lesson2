@@ -6,6 +6,6 @@ public interface RoomInterface {
 
     void chooseAction(Scanner scanner, RoomEntity roomEntity);
     void chooseRoom(Scanner scanner);
-    void chooseInformation(Scanner scanner, RoomEntity roomEntity);
-    void viewInformation(Integer numView, RoomEntity roomEntity);
+    void chooseInformationRoom(Scanner scanner, RoomEntity roomEntity);
+    void viewInformationRoom(Integer numView, RoomEntity roomEntity);
 }

@@ -9,6 +9,6 @@ public interface HouseInterface {
     void chooseHouse(Scanner scanner, RoomEntity roomEntity);
     void viewHouse(Integer numHouse);
     void chooseAction(Scanner scanner, HouseEntity houseEntity, RoomEntity roomEntity);
-    void viewInformation(Integer numView, HouseEntity houseEntity);
-    void chooseInformation(Scanner scanner, HouseEntity houseEntity);
+    void viewInformationHouse(Integer numView, HouseEntity houseEntity);
+    void chooseInformationHouse(Scanner scanner, HouseEntity houseEntity);
 }

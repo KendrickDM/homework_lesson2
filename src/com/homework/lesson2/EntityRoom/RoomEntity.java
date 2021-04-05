@@ -85,7 +85,7 @@ public class RoomEntity extends HouseEntity implements RoomInterface {
                 chooseRoom(scanner);
                 break;
             case 2:
-                chooseInformation(scanner, roomEntity);
+                chooseInformationRoom(scanner, roomEntity);
                 break;
             default:
                 System.out.println("Повторите попытку!");
@@ -110,7 +110,7 @@ public class RoomEntity extends HouseEntity implements RoomInterface {
 
 
     @Override
-    public void viewInformation(Integer numView, RoomEntity roomEntity) {
+    public void viewInformationRoom(Integer numView, RoomEntity roomEntity) {
 
         switch (numView) {
             case 1:
@@ -122,7 +122,7 @@ public class RoomEntity extends HouseEntity implements RoomInterface {
     }
 
     @Override
-    public void chooseInformation(Scanner scanner, RoomEntity roomEntity) {
+    public void chooseInformationRoom(Scanner scanner, RoomEntity roomEntity) {
         System.out.println("Выберите комнату про которую хотите посмотреть информацию");
         System.out.println("1: Комната - 1");
 
@@ -131,7 +131,7 @@ public class RoomEntity extends HouseEntity implements RoomInterface {
         switch (numView){
             case 1:
                 System.out.println("Информация о комнате - 1:");
-                viewInformation(numView, roomEntity);
+                viewInformationRoom(numView, roomEntity);
                 break;
             default:
                 System.out.println("Повторите попытку");
