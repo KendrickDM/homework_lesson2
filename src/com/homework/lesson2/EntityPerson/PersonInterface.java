@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public interface PersonInterface {
 
-    void choosePerson(Scanner scanner, ManEntity manEntity, WomanEntity womanEntity, GiraffeEntity giraffeEntity, HouseEntity houseEntity, RoomEntity roomEntity);
+    void choosePerson(Scanner scanner, ManEntity manEntity, WomanEntity womanEntity, HouseEntity houseEntity, RoomEntity roomEntity);
     void eat(); // поесть
     void sleep(); // поспать
     void chooseRoom(Scanner scanner, RoomEntity roomEntity); // выбрать комнату

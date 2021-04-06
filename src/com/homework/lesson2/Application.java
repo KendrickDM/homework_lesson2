@@ -1,5 +1,6 @@
 package com.homework.lesson2;
 
+import com.homework.lesson2.EntityAnimal.AnimalEntity;
 import com.homework.lesson2.EntityGiraffe.GiraffeEntity;
 import com.homework.lesson2.EntityHouse.HouseEntity;
 import com.homework.lesson2.EntityMan.ManEntity;
@@ -11,7 +12,7 @@ import java.util.Scanner;
 
 public class Application {
 
-    public static void runApp(Scanner sc, GiraffeEntity giraffeEntity, PersonEntity personEntity,
+    public static void runApp(Scanner sc, AnimalEntity animalEntity, GiraffeEntity giraffeEntity, PersonEntity personEntity,
                               ManEntity manEntity, WomanEntity womanEntity, HouseEntity houseEntity, RoomEntity roomEntity){
 
         System.out.print("1: Животное  ");
@@ -24,16 +25,16 @@ public class Application {
 
         switch(numEntity){
             case 1:
-                giraffeEntity.chooseAnimal(sc, giraffeEntity);
+                animalEntity.chooseAnimal(sc, giraffeEntity);
                 break;
             case 2:
-                personEntity.choosePerson(sc, manEntity, womanEntity, giraffeEntity, houseEntity, roomEntity);
+                personEntity.choosePerson(sc, manEntity, womanEntity, houseEntity, roomEntity);
                 break;
             case 3:
-                houseEntity.chooseAction(sc, houseEntity, roomEntity);
+                houseEntity.chooseActionHouse(sc, houseEntity, roomEntity);
                 break;
             case 4:
-                roomEntity.chooseAction(sc, roomEntity);
+                roomEntity.chooseActionRoom(sc, roomEntity);
                 break;
         }
     }

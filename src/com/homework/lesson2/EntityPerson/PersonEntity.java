@@ -77,7 +77,7 @@ public class PersonEntity implements PersonInterface {
     }
 
     @Override
-    public void choosePerson(Scanner scanner, ManEntity manEntity, WomanEntity womanEntity, GiraffeEntity giraffeEntity, HouseEntity houseEntity, RoomEntity roomEntity) {
+    public void choosePerson(Scanner scanner, ManEntity manEntity, WomanEntity womanEntity, HouseEntity houseEntity, RoomEntity roomEntity) {
         System.out.println("Выберите человека, которого хотите посмотреть");
         System.out.println("1: Мужчина");
         System.out.println("2: Женщина");

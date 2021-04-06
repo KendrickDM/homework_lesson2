@@ -76,7 +76,7 @@ public class HouseEntity implements HouseInterface{
     }
 
     @Override
-    public void chooseAction(Scanner scanner, HouseEntity houseEntity, RoomEntity roomEntity) {
+    public void chooseActionHouse(Scanner scanner, HouseEntity houseEntity, RoomEntity roomEntity) {
         System.out.println("1: Посмотреть дом");
         System.out.println("2: Посмотреть информацию о доме");
 

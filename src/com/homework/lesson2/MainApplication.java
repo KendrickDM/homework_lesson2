@@ -1,5 +1,6 @@
 package com.homework.lesson2;
 
+import com.homework.lesson2.EntityAnimal.AnimalEntity;
 import com.homework.lesson2.EntityGiraffe.GiraffeEntity;
 import com.homework.lesson2.EntityHouse.HouseEntity;
 import com.homework.lesson2.EntityMan.ManEntity;
@@ -16,6 +17,8 @@ public class MainApplication {
         System.out.println("Выберите, что вы хотите посмотреть!");
 
         Scanner sc = new Scanner(System.in);
+
+        AnimalEntity animalEntity = new AnimalEntity();
 
         GiraffeEntity giraffeEntity = new GiraffeEntity("Жираф", "Мужской", "Желтый и черный", "Саванна, Африка", "Тревис",
                 7, 800.0, 6.1, "Листья Акации", 55);
@@ -35,6 +38,6 @@ public class MainApplication {
         RoomEntity roomEntity = new RoomEntity(25, "Светло бежевый",
                 23, 1, "Кухня");
 
-        Application.runApp(sc, giraffeEntity, personEntity, manEntity, womanEntity, houseEntity, roomEntity);
+        Application.runApp(sc, animalEntity, giraffeEntity, personEntity, manEntity, womanEntity, houseEntity, roomEntity);
     }
 }

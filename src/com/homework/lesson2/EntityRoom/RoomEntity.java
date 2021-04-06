@@ -74,7 +74,7 @@ public class RoomEntity extends HouseEntity implements RoomInterface {
     }
 
     @Override
-    public void chooseAction(Scanner scanner, RoomEntity roomEntity) {
+    public void chooseActionRoom(Scanner scanner, RoomEntity roomEntity) {
         System.out.println("1: Посмотреть комнату");
         System.out.println("2: Информация о комнате");
 
