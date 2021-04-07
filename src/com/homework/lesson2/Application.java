@@ -39,9 +39,8 @@ public class Application {
                     roomEntity.chooseActionRoom(sc, roomEntity);
                     break;
             }
-        }catch(InputMismatchException ex){
+        }catch(InputMismatchException e){
             System.err.println("Необходимо ввести число от 1 до 4");
         }
-
     }
 }
