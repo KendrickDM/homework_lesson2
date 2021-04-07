@@ -24,14 +24,14 @@ public class RoomEntity extends HouseEntity implements RoomInterface {
         this.roomType = roomType;
     }
 
-    public RoomEntity(String city, String address, Integer numberOfHouse, Integer sizeOfHouse, Integer quantityOfFloors, Integer quantityOfRooms, Integer size, String color, Integer quantityOfFurniture, Integer roomFlor, String roomType) {
-        super(city, address, numberOfHouse, sizeOfHouse, quantityOfFloors, quantityOfRooms);
-        this.size = size;
-        this.color = color;
-        this.quantityOfFurniture = quantityOfFurniture;
-        this.roomFlor = roomFlor;
-        this.roomType = roomType;
-    }
+//    public RoomEntity(String city, String address, Integer numberOfHouse, Integer sizeOfHouse, Integer quantityOfFloors, Integer quantityOfRooms, Integer size, String color, Integer quantityOfFurniture, Integer roomFlor, String roomType) {
+//        super(city, address, numberOfHouse, sizeOfHouse, quantityOfFloors, quantityOfRooms);
+//        this.size = size;
+//        this.color = color;
+//        this.quantityOfFurniture = quantityOfFurniture;
+//        this.roomFlor = roomFlor;
+//        this.roomType = roomType;
+//    }
 
     public Integer getSize() {
         return size;
