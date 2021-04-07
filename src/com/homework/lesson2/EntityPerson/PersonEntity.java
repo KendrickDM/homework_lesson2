@@ -16,7 +16,9 @@ public class PersonEntity implements PersonInterface {
     private String city; // город в котором живет человек
     private String address; // адрес по которому проживает человек
 
-    public PersonEntity(){}
+    public PersonEntity(){
+
+    }
 
     public PersonEntity(String name, String lastName, String gender, Integer age, String city, String address) {
         this.name = name;

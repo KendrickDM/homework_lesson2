@@ -16,7 +16,9 @@ public class ManEntity extends PersonEntity implements ManInterface {
     private String numberPhone; // номер телефона человека
     private String passportDetails; // паспортные данные человека
 
-    public ManEntity(){}
+    public ManEntity(){
+
+    }
 
     public ManEntity(String name, String lastName, String gender, Integer age, String city, String address, Double weight,
                Double height, String company, String post, Integer salary, String numberPhone, String passportDetails) {

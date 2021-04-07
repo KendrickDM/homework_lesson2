@@ -13,7 +13,9 @@ public class GiraffeEntity extends AnimalEntity implements GiraffeInterface{
     private String preferredFood; // предпочтительная еда
     private Integer maxSpeed; // максимально развивающаяся скорость
 
-    public GiraffeEntity(){}
+    public GiraffeEntity(){
+
+    }
 
     public GiraffeEntity(String animalType, String gender, String color, String placeOfResidence, String name,
                          Integer age, Double weight, Double height, String preferredFood, Integer maxSpeed) {

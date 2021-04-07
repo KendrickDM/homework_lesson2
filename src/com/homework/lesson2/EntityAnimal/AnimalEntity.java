@@ -12,7 +12,9 @@ public class AnimalEntity implements AnimalInterface {
     private String placeOfResidence; // место обитания животного
 
 
-    public AnimalEntity(){}
+    public AnimalEntity(){
+
+    }
 
     public AnimalEntity(String animalType, String gender, String color, String placeOfResidence) {
 
