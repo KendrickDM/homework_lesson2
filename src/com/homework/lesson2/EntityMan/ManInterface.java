@@ -8,6 +8,6 @@ import java.util.Scanner;
 
 public interface ManInterface extends PersonInterface {
 
-    void chooseAction(Scanner scanner, ManEntity manEntity, HouseEntity houseEntity, RoomEntity roomEntity); // выбрать действие
-
+    void chooseActionMan(Scanner scanner, ManEntity manEntity, HouseEntity houseEntity, RoomEntity roomEntity); // выбрать действие
+    void printUniqueInf();
 }

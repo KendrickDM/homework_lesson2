@@ -87,13 +87,14 @@ public class ManEntity extends PersonEntity implements ManInterface {
     }
 
     @Override
-    public void chooseAction(Scanner scanner, ManEntity manEntity, HouseEntity houseEntity, RoomEntity roomEntity) {
+    public void chooseActionMan(Scanner scanner, ManEntity manEntity, HouseEntity houseEntity, RoomEntity roomEntity) {
         System.out.println("1: Посмотреть дом");
         System.out.println("2: Поесть");
         System.out.println("3: Поспать");
         System.out.println("4: Погладить");
         System.out.println("5: Покормить");
         System.out.println("6: Посмотреть информацию о мужчине");
+        System.out.println("7: Посмотреть должность и место работы мужчины");
 
         int numAction = scanner.nextInt();
         switch (numAction){
@@ -115,12 +116,20 @@ public class ManEntity extends PersonEntity implements ManInterface {
             case 6:
                 viewInformation(manEntity);
                 break;
+            case 7:
+                printUniqueInf();
+                break;
             default:
                 System.out.println("Повторите попытку!");
 
         }
     }
 
+    @Override
+    public void printUniqueInf() {
+        System.out.println("Этого мужчину зовут " + getName() + " " + getLastName() + "." + " Занимает должность " + getPost() +
+                " в компании " + getCompany() + ". " + getName() + " получает зарплату в размере " + getSalary() + " рублей." );
+    }
 
     @Override
     public String toString() {

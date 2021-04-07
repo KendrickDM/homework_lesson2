@@ -1,6 +1,5 @@
 package com.homework.lesson2.EntityPerson;
 
-import com.homework.lesson2.EntityGiraffe.GiraffeEntity;
 import com.homework.lesson2.EntityHouse.HouseEntity;
 import com.homework.lesson2.EntityMan.ManEntity;
 import com.homework.lesson2.EntityRoom.RoomEntity;
@@ -87,11 +86,11 @@ public class PersonEntity implements PersonInterface {
         switch (numPerson){
             case 1:
                 System.out.println("Выберите действие");
-                manEntity.chooseAction(scanner, manEntity, houseEntity, roomEntity);
+                manEntity.chooseActionMan(scanner, manEntity, houseEntity, roomEntity);
                 break;
             case 2:
                 System.out.println("Выберите действие");
-                womanEntity.chooseAction(scanner, womanEntity, houseEntity, roomEntity);
+                womanEntity.chooseActionWoman(scanner, womanEntity, houseEntity, roomEntity);
                 break;
             default:
                 System.out.println("Повторите попытку!");

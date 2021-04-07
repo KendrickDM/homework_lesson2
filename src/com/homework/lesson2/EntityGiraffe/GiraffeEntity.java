@@ -88,7 +88,7 @@ public class GiraffeEntity extends AnimalEntity implements GiraffeInterface{
     }
 
     @Override
-    public void chooseAction(Scanner scanner, GiraffeEntity giraffeEntity) {
+    public void chooseActionGiraffe(Scanner scanner, GiraffeEntity giraffeEntity) {
         System.out.println("1: Поесть");
         System.out.println("2: Поспать");
         System.out.println("3: Попить");

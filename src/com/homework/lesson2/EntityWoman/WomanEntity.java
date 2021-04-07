@@ -87,7 +87,7 @@ public class WomanEntity extends PersonEntity implements WomanInterface{
     }
 
     @Override
-    public void chooseAction(Scanner scanner, WomanEntity womanEntity, HouseEntity houseEntity, RoomEntity roomEntity) {
+    public void chooseActionWoman(Scanner scanner, WomanEntity womanEntity, HouseEntity houseEntity, RoomEntity roomEntity) {
         System.out.println("1: Выбрать дом");
         System.out.println("2: Поесть");
         System.out.println("3: Поспать");

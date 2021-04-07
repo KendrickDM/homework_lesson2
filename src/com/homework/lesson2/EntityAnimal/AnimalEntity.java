@@ -66,7 +66,7 @@ public class AnimalEntity implements AnimalInterface {
         switch(numAnimal){
             case 1:
                 System.out.println("Выберите действие");
-                giraffeEntity.chooseAction(scanner, giraffeEntity);
+                giraffeEntity.chooseActionGiraffe(scanner, giraffeEntity);
                 break;
             default:
                 System.out.println("Повторите попытку!");

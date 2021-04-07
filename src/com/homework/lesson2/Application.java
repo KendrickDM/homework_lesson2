@@ -8,12 +8,13 @@ import com.homework.lesson2.EntityPerson.PersonEntity;
 import com.homework.lesson2.EntityRoom.RoomEntity;
 import com.homework.lesson2.EntityWoman.WomanEntity;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Application {
 
     public static void runApp(Scanner sc, AnimalEntity animalEntity, GiraffeEntity giraffeEntity, PersonEntity personEntity,
-                              ManEntity manEntity, WomanEntity womanEntity, HouseEntity houseEntity, RoomEntity roomEntity){
+                              ManEntity manEntity, WomanEntity womanEntity, HouseEntity houseEntity, RoomEntity roomEntity) {
 
         System.out.print("1: Животное  ");
         System.out.print("2: Человек  ");
@@ -21,21 +22,26 @@ public class Application {
         System.out.print("4: Комната");
         System.out.println();
 
-        int numEntity = sc.nextInt();
+        try{
+            int numEntity = sc.nextInt();
 
-        switch(numEntity){
-            case 1:
-                animalEntity.chooseAnimal(sc, giraffeEntity);
-                break;
-            case 2:
-                personEntity.choosePerson(sc, manEntity, womanEntity, houseEntity, roomEntity);
-                break;
-            case 3:
-                houseEntity.chooseActionHouse(sc, houseEntity, roomEntity);
-                break;
-            case 4:
-                roomEntity.chooseActionRoom(sc, roomEntity);
-                break;
+            switch (numEntity) {
+                case 1:
+                    animalEntity.chooseAnimal(sc, giraffeEntity);
+                    break;
+                case 2:
+                    personEntity.choosePerson(sc, manEntity, womanEntity, houseEntity, roomEntity);
+                    break;
+                case 3:
+                    houseEntity.chooseActionHouse(sc, houseEntity, roomEntity);
+                    break;
+                case 4:
+                    roomEntity.chooseActionRoom(sc, roomEntity);
+                    break;
+            }
+        }catch(InputMismatchException ex){
+            System.err.println("Необходимо ввести число от 1 до 4");
         }
+
     }
 }
