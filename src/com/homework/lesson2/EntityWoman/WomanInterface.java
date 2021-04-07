@@ -9,4 +9,5 @@ import java.util.Scanner;
 public interface WomanInterface extends PersonInterface {
 
     void chooseActionWoman(Scanner scanner, WomanEntity womanEntity, HouseEntity houseEntity, RoomEntity roomEntity); // выбрать действие
+    void printUniqueInf();
 }

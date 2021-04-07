@@ -94,6 +94,7 @@ public class WomanEntity extends PersonEntity implements WomanInterface{
         System.out.println("4: Погладить");
         System.out.println("5: Покормить");
         System.out.println("6: Посмотреть информацию о женщине");
+        System.out.println("7: Посмотреть должность и место работы женщины");
 
         int numAction = scanner.nextInt();
         switch (numAction){
@@ -115,10 +116,19 @@ public class WomanEntity extends PersonEntity implements WomanInterface{
             case 6:
                 viewInformation(womanEntity);
                 break;
+            case 7:
+                printUniqueInf();
+                break;
             default:
                 System.out.println("Повторите попытку!");
 
         }
+    }
+
+    @Override
+    public void printUniqueInf() {
+        System.out.println("Эту женщину зовут " + getName() + " " + getLastName() + "." + " Занимает должность " + getPost() +
+                " в компании " + getCompany() + ". " + getName() + " получает зарплату в размере " + getSalary() + " рублей." );
     }
 
     @Override
